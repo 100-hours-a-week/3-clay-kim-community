@@ -32,9 +32,8 @@ spring:
 
 jwt:
   expirationtime:
-#    accessTime: 216000
-    accessTime: 21600000
-    refreshTime: 21600000
+    accessTtl: 1800 # 30분
+    refreshTtl: 604800 # 7일
   secret: ${JWT_SECRET:defaultfordevalsjfielsjfinaajfowinblxiejfwoihbya}
 
 
