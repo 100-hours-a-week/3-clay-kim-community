@@ -4,7 +4,7 @@ spring:
 
   datasource:
     url: jdbc:mysql://localhost:3306/community?serverTimezone=UTC&useSSL=false
-    username: root
+    username: clay
     password:
     driver-class-name: com.mysql.cj.jdbc.Driver
 
@@ -15,7 +15,6 @@ spring:
       hibernate:
         format_sql: true
         use_sql_comments: ture
-    show-sql: true
 
   data:
     redis:
@@ -48,10 +47,13 @@ logging:
     org.hibernate.SQL: debug
 
 upload-dir:
-  image: uploads/images
+  image: /home/clay/community/3-clay-kim-community-BE
 
 cors:
-  allowed-origins: http://localhost:3000/
-  exposed-headers: Authorization, Content-Type, access, refresh
-
-exclusive-path: /auth, /error, /posts, /images
+  allowed-origins:
+    - http://43.200.226.212:3000/
+  exposed-headers:
+    - Authorization
+    - Content-Type
+    - access
+    - refresh
