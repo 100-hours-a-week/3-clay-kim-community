@@ -43,15 +43,20 @@ jwt:
 session:
   sessionTtl: 1800
 
-logging:
-  level:
-    org.hibernate.SQL: debug
+#logging:
+#  level:
+#    org.hibernate.SQL: debug
 
 upload-dir:
   image: uploads/images
 
 cors:
-  allowed-origins: http://localhost:3000/
-  exposed-headers: Authorization, Content-Type, access, refresh
+  allowedOrigins:
+    - http://localhost:3000
+  exposedHeaders:
+    - Authorization
+    - Content-Type
+    - access
+    - refresh
 
-exclusive-path: /auth, /error, /posts, /images
+exclusive-path: /auth, /error, /images, /posts/top10
