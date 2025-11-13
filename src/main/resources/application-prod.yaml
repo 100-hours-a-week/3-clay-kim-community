@@ -15,6 +15,7 @@ spring:
       hibernate:
         format_sql: true
         use_sql_comments: ture
+    show-sql: true
 
   data:
     redis:
@@ -42,18 +43,20 @@ jwt:
 session:
   sessionTtl: 1800
 
-logging:
-  level:
-    org.hibernate.SQL: debug
+#logging:
+#  level:
+#    org.hibernate.SQL: debug
 
 upload-dir:
-  image: /home/clay/community/3-clay-kim-community-BE
+  image: uploads/images
 
 cors:
   allowed-origins:
     - http://43.200.226.212:3000/
-  exposed-headers:
+  exposedHeaders:
     - Authorization
     - Content-Type
     - access
     - refresh
+
+exclusive-path: /auth, /error, /images, /posts/top10
